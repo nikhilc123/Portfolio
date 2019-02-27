@@ -30,10 +30,18 @@ class PortvoliosController < ApplicationController
     @portfolio_item = Portvolio.find(params[:id])
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
-        format.html { redirect_to portvolios_path, notice: 'Your portfolio was updated succesfully'}
+        format.html { redirect_to portvolios_path, notice: "Your portfolio was updated succesfully" }
       else
         format.html { render :edit }
       end
+    end
+  end
+
+  def destroy
+    @portfolio_item = Portvolio.find(params[:id])
+    @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to portvolios_url, notice: "Portfolio was deleted succesfully" }
     end
   end
 
