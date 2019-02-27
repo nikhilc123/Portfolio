@@ -3,9 +3,5 @@
 <%= link_to "Create a new Portfolio", new_portvolio_path %>
 
 <% @portfolio_items.each do |portfolio| %>
-  <p><%= portfolio.title %></p>
-  <p><%= portfolio.subtitle %></p>
-  <p><%= portfolio.body %></p>
-  <%= image_tag portfolio.thumb_image if portfolio.thumb_image %>
-  <%= link_to "Edit", edit_portvolio_path(portfolio)%>
+  <p><%= link_to portfolio.title, portfolio %></p>
 <% end %>

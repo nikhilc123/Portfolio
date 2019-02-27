@@ -7,6 +7,10 @@ class PortvoliosController < ApplicationController
     @portfolio_item = Portvolio.new
   end
 
+  def show
+    @portfolio_item = Portvolio.find(params[:id])
+  end
+
   def create
     @portfolio_item = Portvolio.new(portfolio_params)
     respond_to do |format|
