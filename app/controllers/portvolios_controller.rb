@@ -1,6 +1,6 @@
 class PortvoliosController < ApplicationController
   def index
-    @portfolio_items = Portvolio.all
+    @portfolio_items = Portvolio.all.order(created_at: :desc)
   end
 
   def new
