@@ -1,7 +1,7 @@
 <h1><%= @portfolio_item.title %></h1>
 <em><%= @portfolio_item.subtitle %></em>
 <p><%= @portfolio_item.body %></p>
-<%= image_tag @portfolio_item.main_image if @portfolio_item.thumb_image %>
+<%= image_tag @portfolio_item.main_image if @portfolio_item.main_image %>
 <%= link_to "Back", portvolios_path %> |
 <%= link_to "Edit", edit_portvolio_path(@portfolio_item)%> |
 <%= link_to "Delete item", portvolio_path(@portfolio_item), method: :delete, data: { confirm:  "Are you sure?" } %>
