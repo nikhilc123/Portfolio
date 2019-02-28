@@ -3,6 +3,10 @@ class PortvoliosController < ApplicationController
     @portfolio_items = Portvolio.all.order(created_at: :desc)
   end
 
+  def angular
+    @ror_portfolio_items = Portvolio.ror_angular_items
+  end
+
   def new
     @portfolio_item = Portvolio.new
   end

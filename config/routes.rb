@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :portvolios
+  get 'angular-items', to: 'portvolios#angular'
   get 'portvolio/:id', to: 'portvolios#show', as: 'portfolio_show'
 
   root 'pages#home'
