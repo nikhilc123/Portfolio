@@ -59,3 +59,12 @@ puts "Sample Skills loaded"
 
     puts "Portfolio samples created"
   end
+
+#Load sample technologies with portfolio object
+# Technology.new(portvolio_id) OR find a portfolio and dont pass foreign_id
+ 3.times do |technology|
+   p = Portvolio.last
+   p.technologies.create!(name: "Technology #{technology}")
+  end
+
+puts "Sample technologies created with portfolio object"
