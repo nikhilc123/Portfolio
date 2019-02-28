@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 #
 gem 'friendly_id', '~> 5.2.4'
 gem 'pry-rails'
+gem 'devise', '~> 4.6', '>= 4.6.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
