@@ -9,6 +9,7 @@ class PortvoliosController < ApplicationController
 
   def new
     @portfolio_item = Portvolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def show
@@ -52,6 +53,6 @@ class PortvoliosController < ApplicationController
   private
 
   def portfolio_params
-    params.require(:portvolio).permit(:title, :subtitle, :body)
+    params.require(:portvolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
   end
 end
