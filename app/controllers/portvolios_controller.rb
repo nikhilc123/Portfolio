@@ -1,4 +1,6 @@
 class PortvoliosController < ApplicationController
+  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+
   def index
     @portfolio_items = Portvolio.all.order(created_at: :desc)
   end
@@ -13,7 +15,6 @@ class PortvoliosController < ApplicationController
   end
 
   def show
-    @portfolio_item = Portvolio.find(params[:id])
   end
 
   def create
@@ -28,11 +29,9 @@ class PortvoliosController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Portvolio.find(params[:id])
   end
 
   def update
-    @portfolio_item = Portvolio.find(params[:id])
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
         format.html { redirect_to portvolios_path, notice: "Your portfolio was updated succesfully" }
@@ -43,7 +42,6 @@ class PortvoliosController < ApplicationController
   end
 
   def destroy
-    @portfolio_item = Portvolio.find(params[:id])
     @portfolio_item.destroy
     respond_to do |format|
       format.html { redirect_to portvolios_url, notice: "Portfolio was deleted succesfully" }
@@ -53,6 +51,13 @@ class PortvoliosController < ApplicationController
   private
 
   def portfolio_params
-    params.require(:portvolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
+    params.require(:portvolio).permit(:title,
+                                      :subtitle,
+                                      :body,
+                                      technologies_attributes: [:name])
+  end
+
+  def set_portfolio
+    @portfolio_item = Portvolio.find(params[:id])
   end
 end
