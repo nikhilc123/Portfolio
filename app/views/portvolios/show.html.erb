@@ -4,7 +4,7 @@
 
 <p><%= @portfolio_item.body %></p>
 
-<%= image_tag @portfolio_item.main_image if @portfolio_item.main_image %>
+<%= image_tag @portfolio_item.main_image %>
 
 <h2>Technologies used: </h2>
 <% @portfolio_item.technologies.each do |technology| %>
