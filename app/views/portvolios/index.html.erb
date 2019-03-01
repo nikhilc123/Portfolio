@@ -2,9 +2,6 @@
 
 <%= link_to "Create a new Portfolio", new_portvolio_path %>
 
-<% @portfolio_items.each do |portfolio_item| %>
-  <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></p>
-  <em><%= portfolio_item.subtitle %></em>
-  <p><%= portfolio_item.body %></p>
-  <%= image_tag portfolio_item.thumb_image %>
-<% end %>
+<!--naming conventions were different, so pass partial and collection-->
+<!--collection must be plural, partial name and inside content must be singular-->
+<%= render partial: 'portfolio_item', collection: @portfolio_items %>
