@@ -1,5 +1,5 @@
 class PortvoliosController < ApplicationController
-  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+  before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
   layout "portfolio"
 
   def index
@@ -58,7 +58,7 @@ class PortvoliosController < ApplicationController
                                       technologies_attributes: [:name])
   end
 
-  def set_portfolio
+  def set_portfolio_item
     @portfolio_item = Portvolio.find(params[:id])
   end
 end
