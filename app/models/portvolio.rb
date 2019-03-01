@@ -1,5 +1,5 @@
 class Portvolio < ApplicationRecord
-  has_many :technologies
+  has_many :technologies, dependent: :destroy
   # save attributes on associated records through the parent
   # Learn more https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html
   accepts_nested_attributes_for :technologies, reject_if: lambda { |attr| attr['name'].blank? }
