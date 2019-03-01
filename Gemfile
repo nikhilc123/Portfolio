@@ -32,10 +32,17 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-#
+
+# Customize url
 gem 'friendly_id', '~> 5.2.4'
+# Debugger
 gem 'pry-rails'
+# Authentication
 gem 'devise', '~> 4.6', '>= 4.6.1'
+# Styling gem
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+# Bootstrap JavaScript depends on jQuery
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
