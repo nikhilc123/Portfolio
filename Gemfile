@@ -45,6 +45,8 @@ gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'jquery-rails'
 # Custom gem for footer
 gem 'custom_nikhil'
+# action and content based authorizations.
+gem 'petergate', '~> 2.0', '>= 2.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
