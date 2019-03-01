@@ -43,8 +43,8 @@ gem 'devise', '~> 4.6', '>= 4.6.1'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 # Bootstrap JavaScript depends on jQuery
 gem 'jquery-rails'
-# Custom gem
-gem 'custom_nikhil', git: 'https://github.com/nikhilc123/Custom-Gem'
+# Custom gem for footer
+gem 'custom_nikhil'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
