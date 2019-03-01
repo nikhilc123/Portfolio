@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/nikhilc123/Custom-Gem
+  revision: f00151e327ac93c7b78b014d9070dee636e4a4e0
+  specs:
+    custom_nikhil (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -201,6 +207,7 @@ DEPENDENCIES
   bootstrap (~> 4.3, >= 4.3.1)
   byebug
   coffee-rails (~> 4.2)
+  custom_nikhil!
   devise (~> 4.6, >= 4.6.1)
   friendly_id (~> 5.2.4)
   jbuilder (~> 2.5)
