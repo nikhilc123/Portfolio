@@ -1,6 +1,6 @@
 <h1>Portfolio</h1>
 
-<%= link_to "Create a new Portfolio", new_portvolio_path %>
+<%= link_to "Create a new Portfolio", new_portvolio_path if logged_in?(:site_admin) %>
 
 <!--naming conventions were different, so pass partial and collection-->
 <!--collection must be plural, partial name and inside content must be singular-->
