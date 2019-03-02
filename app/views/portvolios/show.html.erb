@@ -1,17 +1,21 @@
-<h1><%= @portfolio_item.title %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @portfolio_item.main_image %>
+    </div>
 
-<em><%= @portfolio_item.subtitle %></em>
+    <div class="col-md-5">
+      <h1><%= @portfolio_item.title %></h1><hr>
+      <p><%= @portfolio_item.subtitle %></p>
+      <p><%= @portfolio_item.body %></p>
+      <hr>
+      <h2>Technologies used: </h2>
+      <% @portfolio_item.technologies.each do |technology| %>
+        <p><%= technology.name  %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<p><%= @portfolio_item.body %></p>
 
-<%= image_tag @portfolio_item.main_image %>
 
-<h2>Technologies used: </h2>
-<% @portfolio_item.technologies.each do |technology| %>
-  <p><%= technology.name  %></p>
-<% end %>
-
-<%= link_to "Back", portvolios_path %> |
-<%= link_to "Edit", edit_portvolio_path(@portfolio_item) if logged_in?(:site_admin) %> |
-<%= link_to "Delete item", portvolio_path(@portfolio_item), method: :delete,
-            data: { confirm:  "Are you sure?" } if logged_in?(:site_admin) %>
