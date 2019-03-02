@@ -1,11 +1,5 @@
-//body {
-//  background-color: aquamarine;
-//}
-//
-//.bottom a {
-//  color: green;
-//}
 @import "bootstrap";
+@import "font-awesome";
 
 /*
  * Globals
@@ -172,4 +166,12 @@ h6, .h6 {
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+/*
+* Custom styles
+*/
+
+.social-links {
+  font-size: 2.5em;
 }

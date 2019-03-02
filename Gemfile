@@ -47,6 +47,10 @@ gem 'jquery-rails'
 gem 'custom_nikhil'
 # action and content based authorizations.
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+# font awesome
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+#Pagination
+gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
