@@ -16,4 +16,8 @@ class Portvolio < ApplicationRecord
     self.main_image ||= Placeholder.image_generator(height: 400, width: 400)
     self.thumb_image ||= Placeholder.image_generator(height: 200, width: 200)
   end
+
+  def self.by_position
+    order('position ASC')
+  end
 end

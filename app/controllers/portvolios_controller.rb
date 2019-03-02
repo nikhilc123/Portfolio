@@ -4,7 +4,7 @@ class PortvoliosController < ApplicationController
   layout "portfolio"
 
   def index
-    @portfolio_items = Portvolio.all.order(created_at: :desc)
+    @portfolio_items = Portvolio.by_position
   end
 
   def angular
