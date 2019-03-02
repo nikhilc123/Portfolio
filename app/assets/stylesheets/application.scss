@@ -164,7 +164,7 @@ body {
  * Custom styles
  */
 
-.card-block {
+.card-body {
   color: black;
   text-align: left;
 }
@@ -175,4 +175,11 @@ body {
 
 .register-text {
   text-align: right;
+}
+
+.login > .card {
+  width: 30rem;
+  margin: 0 auto;
+  float: none;
+
 }
