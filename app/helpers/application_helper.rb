@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def login_helper style
+  def login_helper style = ''
     #check if the class is User or OpenStruct
     # two ways: is_a?(OpenStruct) or User OR simply pass User model
     # concat because ruby always return last statement
