@@ -15,6 +15,7 @@ module ApplicationHelper
   def source_helper(layout_name)
     if session[:source]
       greeting = "Thanks for visiting #{session[:source]} and you are on #{layout_name} page"
+      #dynamically create html elements
       content_tag(:p, "#{greeting}", class: 'source-greeting')
     end
   end
