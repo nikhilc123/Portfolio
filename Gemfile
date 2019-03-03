@@ -78,3 +78,5 @@ gem 'mini_magick', '~> 4.9', '>= 4.9.3'
 gem 'carrierwave-aws', '~> 1.3'
 # Load env variable form .env
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.2'
+# Unobtrusive nested forms handling, using jQuery
+gem 'cocoon', '~> 1.2', '>= 1.2.9'

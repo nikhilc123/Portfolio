@@ -1,0 +1,8 @@
+<!-- nested fields class: jquery should execute on that - cocoon - haml form-->
+<!--without nested fields class remove won't work-->
+<div class="form-group nested-fields" >
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+<!--  cocoons remove method-->
+  <%= link_to_remove_association "Remove Technology", f %>
+</div>

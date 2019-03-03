@@ -61,12 +61,14 @@ class PortvoliosController < ApplicationController
   private
 
   def portfolio_params
+    # id, destroy - cocoons special methods to remove technologies from UI
     params.require(:portvolio).permit(:title,
                                       :subtitle,
                                       :body,
                                       :thumb_image,
                                       :main_image,
-                                      technologies_attributes: [:name])
+                                      technologies_attributes: [:id, :name, :_destroy])
+
   end
 
   def set_portfolio_item
