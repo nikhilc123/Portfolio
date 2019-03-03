@@ -1,4 +1,5 @@
 class PortvoliosController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all
   layout "portfolio"
@@ -17,6 +18,13 @@ class PortvoliosController < ApplicationController
   end
 
   def show
+  end
+
+  def sort
+    params[:order].each do |key, value|
+      Portvolio.find(value[:id]).update(position: value[:position])
+    end
+    render body: nil
   end
 
   def create
