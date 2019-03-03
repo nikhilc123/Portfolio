@@ -80,3 +80,5 @@ gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.2'
 # Unobtrusive nested forms handling, using jQuery
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
+# add Growl-like notifications to your application
+gem 'gritter', '~> 1.2'
