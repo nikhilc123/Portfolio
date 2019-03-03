@@ -1,7 +1,7 @@
 <div class="album py-5 bg-light">
   <div class="container">
 
-    <div class="row sortable">
+    <div class="row <%= "sortable" if logged_in?(:site_admin)%>">
       <!--naming conventions were different, so pass partial and collection-->
       <!--collection must be plural, partial name and inside content must be singular-->
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
