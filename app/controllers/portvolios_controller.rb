@@ -64,6 +64,8 @@ class PortvoliosController < ApplicationController
     params.require(:portvolio).permit(:title,
                                       :subtitle,
                                       :body,
+                                      :thumb_image,
+                                      :main_image,
                                       technologies_attributes: [:name])
   end
 

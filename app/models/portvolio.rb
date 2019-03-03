@@ -10,6 +10,9 @@ class Portvolio < ApplicationRecord
 
   after_initialize :set_defaults
 
+  mount_uploader :thumb_image, PortvolioUploader
+  mount_uploader :main_image, PortvolioUploader
+
   def set_defaults
     # || because if you are editing a file you don't want to override
     # check if it exist, if nil then url

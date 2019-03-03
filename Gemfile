@@ -53,6 +53,12 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
 # UI widgets
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
+# Upload files
+gem 'carrierwave', '~> 0.11.2'
+# Mainupulates image with minimal memory
+gem 'mini_magick', '~> 4.9', '>= 4.9.3'
+# Use aws-sdk for S3 support in CarrierWave
+gem 'carrierwave-aws', '~> 1.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
