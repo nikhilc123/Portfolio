@@ -10,6 +10,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w( blogs.css )
 Rails.application.config.assets.precompile += %w( portvolios.css )
+Rails.application.config.assets.precompile += %w( lightnin.mp4 )
 
 # Precompile additional assets.
 # application.js, application.scss, and all non-JS/CSS in the app/assets
