@@ -4,7 +4,7 @@ class Portvolio < ApplicationRecord
   # Learn more https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html
   accepts_nested_attributes_for :technologies, reject_if: lambda { |attr| attr['name'].blank? }
   include Placeholder
-  validates_presence_of :title, :subtitle, :body, :main_image, :thumb_image
+  validates_presence_of :title, :subtitle, :body
 
   scope :ror_angular_items, -> { where(subtitle: "Angular") }
 

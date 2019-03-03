@@ -33,33 +33,6 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Customize url
-gem 'friendly_id', '~> 5.2.4'
-# Debugger
-gem 'pry-rails'
-# Authentication
-gem 'devise', '~> 4.6', '>= 4.6.1'
-# Styling gem
-gem 'bootstrap', '~> 4.3', '>= 4.3.1'
-# Bootstrap JavaScript depends on jQuery
-gem 'jquery-rails'
-# Custom gem for footer
-gem 'custom_nikhil'
-# action and content based authorizations.
-gem 'petergate', '~> 2.0', '>= 2.0.1'
-# font awesome
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
-#Pagination
-gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
-# UI widgets
-gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
-# Upload files
-gem 'carrierwave', '~> 0.11.2'
-# Mainupulates image with minimal memory
-gem 'mini_magick', '~> 4.9', '>= 4.9.3'
-# Use aws-sdk for S3 support in CarrierWave
-gem 'carrierwave-aws', '~> 1.3'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -76,3 +49,32 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Customize url
+gem 'friendly_id', '~> 5.2.4'
+# Debugger
+gem 'pry-rails'
+# Authentication
+gem 'devise', '~> 4.6', '>= 4.6.1'
+# Styling gem
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+# Bootstrap JavaScript depends on jQuery
+gem 'jquery-rails'
+# Custom gem for footer
+gem 'custom_nikhil'
+# action and content based authorizations.
+gem 'petergate', '~> 2.0', '>= 2.0.1'
+# font awesome
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+# Pagination
+gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
+# UI widgets
+gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
+# Upload files
+gem 'carrierwave', '~> 0.11.2'
+# Mainupulates image with minimal memory
+gem 'mini_magick', '~> 4.9', '>= 4.9.3'
+# Use aws-sdk for S3 support in CarrierWave
+gem 'carrierwave-aws', '~> 1.3'
+# Load env variable form .env
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.2'
