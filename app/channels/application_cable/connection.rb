@@ -1,7 +1,7 @@
 module ApplicationCable
   class Connection < ActionCable::Connection::Base
-    # web socket and action cable works on different https methods
-    # so it needs to identify current_user who is creating a comment
+    #web socket and application cable performs different http access
+    # need to add current_user and guest user for action cable to understand.
     identified_by :current_user
 
     def guest_user
@@ -14,7 +14,8 @@ module ApplicationCable
       guest
     end
 
-    #passed id to guest_user model since warden expects id
+    #add id inside guest_user
+    # warden expects it
     def connect
       self.current_user = find_verified_user || guest_user
       logger.add_tags 'ActionCable', current_user.email
