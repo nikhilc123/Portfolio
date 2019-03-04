@@ -82,3 +82,5 @@ gem 'dotenv-rails', '~> 2.1', '>= 2.1.2'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 # add Growl-like notifications to your application
 gem 'gritter', '~> 1.2'
+# A Ruby interface to the Twitter API.
+gem 'twitter', '~> 6.2'
