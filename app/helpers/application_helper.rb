@@ -71,8 +71,17 @@ module ApplicationHelper
   def active? path
     "active" if current_page? path
   end
-end
 
-def active? path
-  "active" if current_page? path
+  #layout pages - app.html, blog.html, portfolio.html main page
+  def alerts
+    alert = (flash[:alert] || flash[:notice] || flash[:error])
+    if alert
+      alert_generator alert
+    end
+  end
+
+  #Site specific pages - message
+  def alert_generator msg
+    js add_gritter(msg, :title => "Nikhil says: ", :sticky => false)
+  end
 end
