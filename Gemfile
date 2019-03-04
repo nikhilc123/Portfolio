@@ -84,3 +84,5 @@ gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'gritter', '~> 1.2'
 # A Ruby interface to the Twitter API.
 gem 'twitter', '~> 6.2'
+# Using for Action Cable - live data, faster performance
+gem 'redis', '~> 3.3', '>= 3.3.1'
