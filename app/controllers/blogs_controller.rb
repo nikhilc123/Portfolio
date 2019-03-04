@@ -12,6 +12,14 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    # load all the comments for blog, performance is faster!
+    @blog = Blog.includes(:comments).friendly.find(params[:id])
+    # need a comments form that is why created a instance variable
+    # use @comment inside form_for just like 'new for blogs'
+    @comment = Comment.new
+    @page_title = @blog.title
+    @seo_keywords = @blog.body
+    @comment = Comment.new
   end
 
   # GET /blogs/new
