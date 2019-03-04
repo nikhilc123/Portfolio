@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   end
 
   get 'angular-items', to: 'portvolios#angular'
+
   get 'portvolio/:id', to: 'portvolios#show', as: 'portfolio_show'
+
+  get 'tech-news', to: 'pages#tech_news'
 
   root 'pages#home'
 
