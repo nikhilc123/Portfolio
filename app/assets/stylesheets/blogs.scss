@@ -191,7 +191,12 @@ h6, .h6 {
   font-weight: 800;
 }
 
-.breadcrum-icon {
+.breadcrum-edit-delete {
   position: absolute;
   right: 30px;
+}
+
+.blog-crumb a {
+  font-size: 1.25em;
+  margin: 0px 10px 0px 10px;
 }
