@@ -17,6 +17,19 @@
   </div>
 
   <div class="form-group">
+    <%= form.label :topic_id %>
+<!--    you can access any attribute once you have Topic.all-->
+    <%= form.collection_select(:topic_id, Topic.all, :id, :title,
+                                {
+                                   selected: blog.topic.id,
+                                   include_blank: true
+                                },
+                                class: 'form-control'
+                               )
+    %>
+  </div>
+
+  <div class="form-group">
     <%= form.submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>

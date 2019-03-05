@@ -23,7 +23,7 @@ class BlogsController < ApplicationController
       # use @comment inside form_for just like 'new for blogs'
       @comment = Comment.new
     else
-      redirect_to blogs_path, notice: "Sorry, you are not authorized to access this page!"
+      redirect_to blogs_path, notice: "Unauthorized: Login first to access this page!"
     end
     @page_title = @blog.title
     @seo_keywords = @blog.body
@@ -88,13 +88,13 @@ class BlogsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # Use callbacks to share common setup or constraints betwesen actions.
     def set_blog
       @blog = Blog.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :body, :topic_id)
     end
 end
