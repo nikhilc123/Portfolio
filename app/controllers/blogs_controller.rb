@@ -16,11 +16,15 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    if logged_in?(:site_admin) || @blog.published?
     # load all the comments for blog, performance is faster!
-    @blog = Blog.includes(:comments).friendly.find(params[:id])
-    # need a comments form that is why created a instance variable
-    # use @comment inside form_for just like 'new for blogs'
-    @comment = Comment.new
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      # need a comments form that is why created a instance variable
+      # use @comment inside form_for just like 'new for blogs'
+      @comment = Comment.new
+    else
+      redirect_to blogs_path, notice: "Sorry, you are not authorized to access this page!"
+    end
     @page_title = @blog.title
     @seo_keywords = @blog.body
   end
