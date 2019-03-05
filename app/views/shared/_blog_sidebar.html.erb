@@ -4,14 +4,17 @@
     <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
   </div>
 
-  <div class="sidebar-module">
-    <h4>Topics</h4>
-    <div>
-      <% @side_bar_topic.each do |topic| %>
-        <p><%= link_to topic.title, topic %></p>
-      <% end %>
+<!--  prevent nil error - creating a new blog will not have a topic so it will throw an error-->
+  <% if @side_bar_topic %>
+    <div class="sidebar-module">
+      <h4>Topics</h4>
+      <div>
+        <% @side_bar_topic.each do |topic| %>
+          <p><%= link_to topic.title, topic %></p>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
   <div class="sidebar-module">
     <h4>Elsewhere</h4>

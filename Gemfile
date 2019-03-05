@@ -86,3 +86,8 @@ gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.2'
 # Using for Action Cable - live data, faster performance
 gem 'redis', '~> 3.3', '>= 3.3.1'
+# A fast, safe and extensible Markdown to (X)HTML parser
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+# Fast and easy syntax highlighting for selected languages
+gem 'coderay', '~> 1.1', '>= 1.1.2'
+
