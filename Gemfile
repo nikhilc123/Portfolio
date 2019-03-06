@@ -83,15 +83,13 @@ gem 'cocoon', '~> 1.2', '>= 1.2.9'
 # add Growl-like notifications to your application
 gem 'gritter', '~> 1.2'
 # A Ruby interface to the Twitter API.
-gem "twitter", :git => 'https://github.com/sferik/twitter.git'
+gem 'twitter', '~> 6.2'
 # Using for Action Cable - live data, faster performance
 gem 'redis', '~> 3.3', '>= 3.3.1'
 # A fast, safe and extensible Markdown to (X)HTML parser
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 # Fast and easy syntax highlighting for selected languages
 gem 'coderay', '~> 1.1', '>= 1.1.2'
-# HTTP/REST API client library
-gem 'faraday', '~> 0.9.2'
 
 ruby "2.5.3"
 
