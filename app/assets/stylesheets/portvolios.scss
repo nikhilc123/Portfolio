@@ -7,6 +7,7 @@
   padding-bottom: 3rem;
   margin-bottom: 0;
   background-color: #fff;
+  font-family: 'Lato', sans-serif;
 }
 @media (min-width: 768px) {
   .jumbotron {
@@ -21,6 +22,15 @@
 
 .jumbotron-heading {
   font-weight: 300;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Roboto', sans-serif;
 }
 
 .jumbotron .container {
