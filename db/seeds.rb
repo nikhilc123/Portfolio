@@ -1,9 +1,30 @@
+User.create!(
+        email: "testadmin@test.com",
+        password: "Admin@123",
+        password_confirmation: "Admin@123",
+        roles: :site_admin,
+        name: "Admin User"
+)
+
+puts "1 Admin created"
+
+User.create!(
+    email: "testuser@test.com",
+    password: "Welcome@123",
+    password_confirmation: "Welcome@123",
+    roles: :site_admin,
+    name: "Regular User"
+)
+
+puts "1 Regular User created"
+
+
 #Load sample topic data
 3.times do |topic|
   Topic.create!(title: "Topic: #{topic}")
 end
 
-puts "Sample Topics created"
+puts "3 Sample Topics created"
 
 #Load sample blog data
 10.times do |blog|
@@ -18,7 +39,7 @@ puts "Sample Topics created"
           )
 end
 
-puts "Sample Blogs loaded"
+puts "10 Sample Blogs loaded"
 
 #Load sample skills
 5.times do |skill|
@@ -28,7 +49,7 @@ puts "Sample Blogs loaded"
   )
 end
 
-puts "Sample Skills loaded"
+puts "5 Sample Skills loaded"
 
 8.times do |portfolio_skills|
   Portvolio.create!(
@@ -43,7 +64,7 @@ puts "Sample Skills loaded"
   )
   end
 
-  puts "Portfolio samples created"
+  puts "8 Portfolio samples created"
 
   1.times do |portfolio_skills|
     Portvolio.create!(
@@ -57,7 +78,7 @@ puts "Sample Skills loaded"
         thumb_image: "https://via.placeholder.com/200x200"
     )
 
-    puts "Portfolio samples created"
+    puts "1 Portfolio special skill samples created"
   end
 
 #Load sample technologies with portfolio object
@@ -67,4 +88,4 @@ puts "Sample Skills loaded"
    p.technologies.create!(name: "Technology #{technology}")
   end
 
-puts "Sample technologies created with portfolio object"
+puts "3 Sample technologies created with portfolio object"
