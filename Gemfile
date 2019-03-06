@@ -90,6 +90,8 @@ gem 'redis', '~> 3.3', '>= 3.3.1'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 # Fast and easy syntax highlighting for selected languages
 gem 'coderay', '~> 1.1', '>= 1.1.2'
+# HTTP/REST API client library
+gem 'faraday', '~> 0.9.2'
 
 ruby "2.5.3"
 
