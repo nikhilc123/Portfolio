@@ -12,11 +12,10 @@ module ApplicationHelper
     end
   end
 
-  def source_helper(layout_name)
+  def source_helper(styles)
     if session[:source]
-      greeting = "Thanks for visiting #{session[:source]} and you are on #{layout_name} page"
-      #dynamically create html elements
-      content_tag(:p, "#{greeting}", class: 'source-greeting')
+      greeting = "Thanks for visiting me from #{session[:source]}. Please feel free to #{ link_to 'contact me', contact_path} if you want to work together."
+      content_tag(:div, greeting.html_safe, class: styles)
     end
   end
 
