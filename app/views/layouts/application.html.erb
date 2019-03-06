@@ -22,12 +22,11 @@
         <div class="cover-container">
 
           <%= video_tag(
-              'lightning.mp4',
+              ['lightnin.mp4', 'lightning.webm'],
               id: 'background',
               autoplay: true,
               loop: true,
-              poster: 'light.jpg',
-              size: "320x240"
+              poster: 'light.jpg'
               ) %>
 
 
@@ -44,3 +43,15 @@
     </div>
   </body>
 </html>
+
+<!--<script>-->
+<!--    var isChrome = !!window.chrome;-->
+<!--    var isIE = /*@cc_on!@*/false;-->
+
+<!--    if( isChrome ) {-->
+<!--        $("#background").replaceWith($('<video id="background" width="100%" autoplay loop><source src="/assets/videos/lightning.webm" type="video/webm"></video>'));-->
+<!--    }-->
+<!--    if( isIE ) {-->
+<!--        $("#background").replaceWith($('<img id="lightning" src="images/light.jpg" />'));-->
+<!--    }-->
+<!--</script>-->
